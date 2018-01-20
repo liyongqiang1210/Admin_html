@@ -1,6 +1,6 @@
   (function() {
   	$('#exampleTableEvents').bootstrapTable({
-  		url:"http://39.106.154.2:8080/Maven_SSM/51cto/selectVideoUrlList",
+  		url: "http://39.106.154.2:8080/Maven_SSM/51cto/selectVideoUrlList",
   		search: true,
   		cache: false,
   		pagination: true,
@@ -58,7 +58,7 @@
   					var html = '<a href="javascript:EditVideo(' + value + ')">编辑</a>';
   					html += '　<a href="javascript:DeleteVideo(' + value + ')">删除</a>';
   					html += '   <a href="javascript:SelectVideo(' + value + ')">查看详细课程</a>'
-  					
+
   					return html;
   				}
   			}
@@ -70,12 +70,16 @@
   function EditVideo(str) {
   	alert("id:" + str);
   }
+
   function DeleteVideo(str) {
   	alert("id:" + str);
   }
+
   function SelectVideo(video_id) {
-  	var courseJson = $.post("http://39.106.154.2:8080/Maven_SSM/51cto/selectCourseByVideoID",{video_url_id:video_id},
-  	function(result){
-  		alert(result);
-  	}
+  	var courseJson = $.post("http://39.106.154.2:8080/Maven_SSM/51cto/selectCourseByVideoID", {
+  			video_url_id: video_id
+  		},
+  		function(result) {
+  			alert(result);
+  		})
   }

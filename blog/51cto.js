@@ -80,6 +80,7 @@
   			video_url_id: video_id
   		},
   		function(result) {
-  			alert(result);
+  			$.cookie('data',JSON.stringify(courseJson));
   		})
+  	window.location.href="51cto_course.html"
   }

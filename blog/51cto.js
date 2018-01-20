@@ -1,6 +1,6 @@
   (function() {
   	$('#exampleTableEvents').bootstrapTable({
-  		url: "../js/demo/bootstrap_table_test.json",
+  		url:"http://39.106.154.2:8080/Maven_SSM/51cto/selectVideoUrlList",
   		search: true,
   		cache: false,
   		pagination: true,
@@ -13,7 +13,7 @@
   		sidePagination: "client", //分页方式：client客户端分页，server服务端分页（*）  
   		pageNumber: 1,
   		pageSize: 5,
-  		//		height: 300,//设置行高会导致表格的表头与内容对不齐
+  		//height: 750,//设置行高会导致表格的表头与内容对不齐
   		pageList: [5, 10, 15, 20],
   		iconSize: 'outline',
   		toolbar: '#exampleTableEventsToolbar',
@@ -73,6 +73,9 @@
   function DeleteVideo(str) {
   	alert("id:" + str);
   }
-  function SelectVideo(str) {
-  	alert("id:" + str);
+  function SelectVideo(video_id) {
+  	var courseJson = $.post("http://39.106.154.2:8080/Maven_SSM/51cto/selectCourseByVideoID",{video_url_id:video_id},
+  	function(result){
+  		alert(result);
+  	}
   }

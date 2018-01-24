@@ -1,8 +1,8 @@
   (function() {
-  	var data = $.cookie("data"); // 获取cookie中保存的data
-  	var courseJson = JSON.parse(data);
+  	var video_url = $.cookie("video_url"); // 获取cookie中保存的数据
+  	console.log(video_url);
   	$('#exampleTableEvents').bootstrapTable({
-  		data: courseJson,
+  		url: video_url,
   		search: true,
   		cache: false,
   		pagination: true,
@@ -50,7 +50,7 @@
   			{
   				title: '操作',
   				align: 'center',
-  				field: 'video_id',
+  				field: 'course_id',
   				formatter: function(value, row, index) {
   					var html = '<a href="javascript:EditCourse(' + value + ')">编辑</a>';
   					html += '　<a href="javascript:DeleteCourse(' + value + ')">删除</a>';
@@ -60,8 +60,7 @@
   				}
   			}
   		]
-  	});
-
+  	})
   })(document, window, jQuery);
 
   function EditVideo(str) {

@@ -14,7 +14,7 @@
   		pageNumber: 1,
   		pageSize: 15,
   		//height: 750,//设置行高会导致表格的表头与内容对不齐
-  		pageList: [5, 10, 15],
+  		pageList: [10, 15],
   		iconSize: 'outline',
   		toolbar: '#exampleTableEventsToolbar',
   		icons: {

@@ -75,12 +75,9 @@
   	alert("id:" + str);
   }
 
+	// 查看详细课程方法
   function SelectVideo(video_id) {
-  	var courseJson = $.post("http://39.106.154.2:8080/Maven_SSM/51cto/selectCourseByVideoID", {
-  			video_url_id: video_id
-  		},
-  		function(result) {
-  			$.cookie('data',JSON.stringify(courseJson));
-  		})
-  	window.location.href="51cto_course.html"
-  }
+  	var video_url = "http://39.106.154.2:8080/Maven_SSM/51cto/selectCourseByVideoID?video_url_id="+video_id;
+  	$.cookie("video_url",video_url); // 将url以cookie形式保存
+  	window.location.href = "51cto_course.html"; // 跳转到详细课程页面
+  } 

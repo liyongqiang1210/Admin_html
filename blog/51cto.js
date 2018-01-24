@@ -12,9 +12,9 @@
   		striped: true, //是否显示行间隔色 
   		sidePagination: "client", //分页方式：client客户端分页，server服务端分页（*）  
   		pageNumber: 1,
-  		pageSize: 5,
+  		pageSize: 15,
   		//height: 750,//设置行高会导致表格的表头与内容对不齐
-  		pageList: [5, 10, 15, 20],
+  		pageList: [5, 10, 15],
   		iconSize: 'outline',
   		toolbar: '#exampleTableEventsToolbar',
   		icons: {
